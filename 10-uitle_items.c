@@ -15,7 +15,8 @@ int is_printable(char a)
 	return (0);
 }
 /**
- * append_hexa_code - function to append hexadecimal numbers and write it to buffer
+ * append_hexa_code - function to append hexadecimal numbers
+ * and write it to buffer
  *
  * @buffer: array of spaces to handle printf file
  * @a: number to append.
