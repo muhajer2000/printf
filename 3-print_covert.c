@@ -57,6 +57,15 @@ int printf_octal(va_list item, char buffer[],
 
 	if (number == 0)
 		buffer[a--] = '0';
+	buffer[BUFF_SIZE - 1] = '\0';
+
+	while (number > 0)
+	{
+		buffer[a--] = (number % 8) + '0';
+		number / 8;
+	}
+	if (flags & F_HASH && init_num != 0)
+		buffer[a--] = '0';
 	a++;
 
 	return (writ_unsgned(0, a, buffer, flags, width, precision, size));
