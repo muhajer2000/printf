@@ -184,7 +184,7 @@ int writ_pointer(char buffer[], int index, int length,
 			buffer[--index] = '0';
 			if (extra_p)
 				buffer[--index] = extra_p;
-			return (write(1, &buffer[index], length) + write(1, &buffer[3], a - 3));
+			return (write(1, &buffer[index],+ length) + write(1, &buffer[3], a - 3));
 		}
 		else if (!(flags & F_MINUS) && ptr == ' ')/* extra char to left of buffer */
 		{
@@ -201,9 +201,8 @@ int writ_pointer(char buffer[], int index, int length,
 			buffer[1] = '0';
 			buffer[2] = 'x';
 			return (write(1, &buffer[ptr_start], a - ptr_start) +
-		
-		}		write(1, &buffer[index], length - (1 - ptr_start) - 2);
-		
+				write(1, &buffer[index], length - (1 - ptr_start) - 2));
+
 		}
 	}
 	buffer[--index] = 'x';
@@ -211,5 +210,4 @@ int writ_pointer(char buffer[], int index, int length,
 	if (extra_p)
 		buffer[--index] = extra_p;
 	return (write(1, &buffer[index], BUFF_SIZE - index - 1));
-	}
-
+}
