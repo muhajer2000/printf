@@ -18,6 +18,7 @@ int get_flags(const char *format, int *a)
 
 	for (curr_j = *a + 1; format[curr_j] != '\0'; curr_j++)
 	{
+
 		for (i = 0; FLAGS_CH[i] != '\0'; i++)
 			if (format[curr_j] == FLAGS_CH[i])
 			{
@@ -27,9 +28,8 @@ int get_flags(const char *format, int *a)
 
 			if (FLAGS_CH[i] == 0)
 				break;
-			}
-		*a = curr_j - 1;
-
+	}
+		 *a = curr_j - 1;
 		return (flags);
 }
 /*get width*/
