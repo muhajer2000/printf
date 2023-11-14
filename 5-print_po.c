@@ -1,16 +1,18 @@
 #include "main.h"
 
 /*5-print_po.c(handel pointer)*/
-/**
- * print_pointer - Prints the value of a pointer variable
- * @types: List a of arguments
- * @buffer: Buffer array to handle print
- * @flags:  Calculates active flags
- * @width: get width
- * @precision: Precision specification
- * @size: Size specifier
+/********************************************************
+ *
+ * print_pointer - Prints the value of a pointer variable.
+ * @types: List a of arguments.
+ * @buffer: Buffer array to handle print.
+ * @flags:  Calculates active flags.
+ * @width: get width.
+ * @precision: Precision specification.
+ * @size: Size specifier.
  * Return: Number of chars printed.
- */
+ *
+ ********************************************************/
 int printf_pointer(va_list item, char buffer[],
 	int flags, int width, int precision, int size)
 {
@@ -48,7 +50,7 @@ int printf_pointer(va_list item, char buffer[],
 
 	index++;
 
-	/*return (write(1, &buffer[i], BUFF_SIZE - i - 1));*/
+	/**return (write(1, &buffer[i], BUFF_SIZE - i - 1));**/
 	return (writ_pointer(buffer, index, len,
 		width, flags, space, extra_a, pad_start));
 }

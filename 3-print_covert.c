@@ -1,16 +1,18 @@
 #include "main.h"
 
 /*3-print_covert.c*/
-/**
- * print_unsigned - Prints an unsigned number
- * @types: List a of arguments
- * @buffer: Buffer array to handle print
- * @flags:  Calculates active flags
- * @width: get width
- * @precision: Precision specification
- * @size: Size specifier
+/************************************************
+ *
+ * print_unsigned - Prints an unsigned number.
+ * @types: List a of arguments.
+ * @buffer: Buffer array to handle print.
+ * @flags:  Calculates active flags.
+ * @width: get width.
+ * @precision: Precision specification.
+ * @size: Size specifier.
  * Return: Number of chars printed.
- */
+ *
+ **************************************************/
 int printf_unsigned(va_list item, char buffer[],
 	int flags, int width, int precision, int size)
 {

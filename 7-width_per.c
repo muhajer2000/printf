@@ -1,14 +1,15 @@
 #include"main.h"
 
-/*task (7-width_per.c)
-//task 8-9-10-11-12*/
-/*flags percition width*/
-/**
- * get_flags - Calculates active flags
- * @format: Formatted string in which to print the arguments
+/*(7-width_per.c)*/
+ /*flags percition width**/
+/************************************************************
+ *
+ * get_flags - Calculates active flags.
+ * @format: Formatted string in which to print the arguments.
  * @i: take a parameter.
- * Return: Flags:
- */
+ * Return: Flags
+ *
+ *************************************************************/
 int get_flags(const char *format, int *a)
 {
 	/* - + 0 # ' ' */
@@ -39,11 +40,10 @@ int get_flags(const char *format, int *a)
 /*get width*/
 
 /**
- * get_width - Calculates the width for printing
+ * get_width - Calculates the width for printing.
  * @format: Formatted string in which to print the arguments.
  * @i: List of arguments to be printed.
  * @list: list of arguments.
- *
  * Return: width.
  */
 int get_width(const char *format, int *a, va_list fm_item)
@@ -75,11 +75,10 @@ int get_width(const char *format, int *a, va_list fm_item)
 }
 /*grt percs*/
 /**
- * get_precision - Calculates the precision for printing
- * @format: Formatted string in which to print the arguments
+ * get_precision - Calculates the precision for printing.
+ * @format: Formatted string in which to print the arguments.
  * @i: List of arguments to be printed.
  * @list: list of arguments.
- *
  * Return: Precision.
  */
 int get_precision(const char *format, int *j, va_list fm_item)
@@ -116,10 +115,9 @@ int get_precision(const char *format, int *j, va_list fm_item)
 }
 /*get size*/
 /**
- * get_size - Calculates the size to cast the argument
- * @format: Formatted string in which to print the arguments
+ * get_size - Calculates the size to cast the argument.
+ * @format: Formatted string in which to print the arguments.
  * @i: List of arguments to be printed.
- *
  * Return: Precision.
  */
 int get_size(const char *format, int *a)

@@ -3,17 +3,16 @@
 /*11-handel_chars.c
 **hendel chars and numbers*/
 /*handel char*/
-/**
- * handle_write_char - Prints a string
+/****************************************
+ * handle_write_char - Prints a string.
  * @c: char types.
- * @buffer: Buffer array to handle print
+ * @buffer: Buffer array to handle print.
  * @flags:  Calculates active flags.
  * @width: get width.
- * @precision: precision specifier
- * @size: Size specifier
- *
+ * @precision: precision specifier.
+ * @size: Size specifier.
  * Return: Number of chars printed.
- */
+ ****************************************/
 int handle_write_char(char c, char buffer[],
 	int flags, int width, int precision, int size)
 {
@@ -48,28 +47,27 @@ int handle_write_char(char c, char buffer[],
 }
 /*hamdel number*/
 /*write to call buffer*/
-/**
- * write_num - Write a number using a bufffer
- * @ind: Index at which the number starts on the buffer
- * @buffer: Buffer
- * @flags: Flags
- * @width: width
- * @prec: Precision specifier
- * @length: Number length
- * @padd: Pading char
- * @extra_c: Extra char
- *
+/*******************************************************
+ * write_num - Write a number using a bufffer.
+ * @ind: Index at which the number starts on the buffer.
+ * @buffer: Buffer.
+ * @flags: Flags.
+ * @width: width.
+ * @prec: Precision specifier.
+ * @length: Number length.
+ * @padd: Pading char.
+ * @extra_c: Extra char.
  * Return: Number of printed chars.
- */
+ ***********************************************************/
 int writ_num(int index, char buffer[], int flags, int width, int pre,
 	int length, char ptr, char extra_a)
 {
 	int j, ptr_start = 1;
 
 	if (pre == 0 && index == BUFF_SIZE - 2 && buffer[index] == '0' && width == 0)
-		return (0); /* printf(".0d", 0)  no char is printed */
+		return (0); /* printf(".0d", 0)  no char is printed ********/
 	if (pre == 0 && index == BUFF_SIZE - 2 && buffer[index] == '0')
-		buffer[index] = ptr = ' '; /* width is displayed with padding ' ' */
+		buffer[index] = ptr = ' '; /**** width is displayed with padding ' ' */
 	if (pre > 0 && pre < length)
 		ptr = ' ';
 	while (pre > length)
@@ -81,19 +79,19 @@ int writ_num(int index, char buffer[], int flags, int width, int pre,
 		for (j = 1; j < width - length + 1; j++)
 			buffer[j] = ptr;
 		    buffer[j] = '\0';
-		if (flags & F_MINUS && ptr == ' ')/* Asign extra char to left of buffer */
+		if (flags & F_MINUS && ptr == ' ')/* Asign extra char to left of buffer *****/
 		{
 			if (extra_a)
 				buffer[--index] = extra_a;
 			return (write(1, &buffer[index], length) + write(1, &buffer[1], j - 1));
 		}
-		else if (!(flags & F_MINUS) && ptr == ' ')/* extra char to left of buff */
+		else if (!(flags & F_MINUS) && ptr == ' ')/* extra char to left of buff *****/
 		{
 			if (extra_a)
 				buffer[--index] = extra_a;
 			return (write(1, &buffer[1], j - 1) + write(1, &buffer[index], length));
 		}
-		else if (!(flags & F_MINUS) && ptr == '0')/* extra char to left of padd */
+		else if (!(flags & F_MINUS) && ptr == '0')/* extra char to left of padd ***/
 		{
 			if (extra_a)
 				buffer[--ptr_start] = extra_a;
@@ -106,18 +104,17 @@ int writ_num(int index, char buffer[], int flags, int width, int pre,
 	return (write(1, &buffer[index], length));
 }
 /*hendl negtive*/
-/**
- * write_number - Prints a string
- * @is_negative: Lista of arguments
- * @ind: char types.
- * @buffer: Buffer array to handle print
- * @flags:  Calculates active flags
+/****************************************
+ * write_number - Prints a string.
+ * @is_negative: Lista of arguments.
+ * @ind: char types..
+ * @buffer: Buffer array to handle print.
+ * @flags:  Calculates active flags.
  * @width: get width.
- * @precision: precision specifier
- * @size: Size specifier
- *
- * Return: Number of chars printed.
- */
+ * @precision: precision specifier.
+ * @size: Size specifier.
+ * Return: Number of chars printed..
+ ******************************************/
 
 int writ_unsgned(int is_negative, int index,
 	char buffer[], int flags, int width, int precision, int size)

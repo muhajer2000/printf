@@ -1,16 +1,18 @@
 #include "main.h"
 
 /* 1-print_intger.c*/
-/**
- * print_int - Print int
- * @types: Lista of arguments
- * @buffer: Buffer array to handle print
- * @flags:  Calculates active flags
+/********************************************
+ *
+ * print_int - Print int.
+ * @types: Lista of arguments.
+ * @buffer: Buffer array to handle print.
+ * @flags:  Calculates active flags.
  * @width: get width.
- * @precision: Precision specification
- * @size: Size specifier
- * Return: Number of chars printed
- */
+ * @precision: Precision specification.
+ * @size: Size specifier.
+ * Return: Number of chars printed.
+ *
+ ********************************************/
 int printf_intger(va_list item, char buffer[],
 	int flags, int width, int precision, int size)
 {
