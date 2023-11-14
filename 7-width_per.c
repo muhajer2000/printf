@@ -26,11 +26,11 @@ int get_flags(const char *format, int *a)
 				break;
 			}
 
-			if (FLAGS_CH[i] == 0)
-				break;
+		if (FLAGS_CH[i] == 0)
+			break;
 	}
-		 *a = curr_j - 1;
-		return (flags);
+	*a = curr_j - 1;
+	return (flags);
 }
 /*get width*/
 
