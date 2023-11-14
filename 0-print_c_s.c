@@ -15,10 +15,9 @@ int printf_char(va_list item, char buffer[],
 	int flags, int width, int precision, int size)
 {
 
-	char ch = va_arg(item, int);
-	int character = handle_write_char(ch, flags, precision, width,  buffer,  size);
+	char c = va_arg(item, int);
 
-	return (character);
+	return (handle_write_char(c, flags, precision, width,  buffer,  size));
 }
 /*******************************************************
  * print_str - function print srting and handel it.
@@ -71,9 +70,9 @@ int printf_str(va_list item, char buffer[],
 			return (width);
 		}
 	}
-	int string = write(1, st, len);
 
-	return (string);
+
+	return (write(1, st, len));
 }
 
 /**********************************************************
@@ -95,7 +94,6 @@ int printf_percent(va_list item, char buffer[],
 	UNUSED(width);
 	UNUSED(precision);
 	UNUSED(size);
-	int b = write(1, "%%", 1);
 
-	return (b);
+	return (write(1, "%%", 1));
 }
