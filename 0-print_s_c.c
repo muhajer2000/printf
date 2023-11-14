@@ -1,5 +1,4 @@
 #include "main.h"
-#include <limits.h>
 
 /**
  * printf_char- function that to  print a character
