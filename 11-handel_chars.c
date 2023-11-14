@@ -201,9 +201,14 @@ int writ_pointer(char buffer[], int index, int length,
 			buffer[1] = '0';
 			buffer[2] = 'x';
 			return (write(1, &buffer[ptr_start], a - ptr_start) +
+<<<<<<< HEAD
 		
 		}		write(1, &buffer[index], length - (1 - ptr_start) - 2));
 		
+=======
+				write(1, &buffer[index], length - (1 - ptr_start) - 2));
+		}
+>>>>>>> 7ff7168800a4e7fd64ebfdddc0a8f046ef44e070
 	}
 	buffer[--index] = 'x';
 	buffer[--index] = '0';
