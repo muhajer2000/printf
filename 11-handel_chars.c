@@ -203,6 +203,7 @@ int writ_pointer(char buffer[], int index, int length,
 			return (write(1, &buffer[ptr_start], a - ptr_start) +
 				write(1, &buffer[index], length - (1 - ptr_start) - 2));
 		}
+	}
 	buffer[--index] = 'x';
 	buffer[--index] = '0';
 	if (extra_p)
